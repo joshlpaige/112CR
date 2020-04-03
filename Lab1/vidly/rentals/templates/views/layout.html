@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent-A-Flick</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="../../static/index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="uk-navbar-container uk-margin" uk-navbar>
+            <div class="uk-navbar-left">
+
+                <a class="uk-navbar-item uk-logo" href="#"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmJF2-3R2dZjxL4gOaDbrYZYSNGvwusfRsA39dfHWnc8iDz7Yc"
+                        alt=""></a>
+
+                <ul class="uk-navbar-nav">
+                    
+                </ul>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        <li class="uk-active"><a href="{{ movie.id }}"><i class="fas fa-shopping-cart"></i>cart</a></li>
+                    </ul>
+                    <div class="uk-navbar-item uk-visible@m">
+
+                        <polyline fill="none" stroke="#000" points="14,10 9.5,14.5 5,10"></polyline>
+                        <rect x="3" y="17" width="13" height="1"></rect>
+                        <line fill="none" stroke="#000" x1="9.5" y1="13.91" x2="9.5" y2="3"></line>
+                        </svg></a>
+                    </div> <a uk-navbar-toggle-icon="" href="#offcanvas" uk-toggle=""
+                        class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon"><svg width="20" height="20"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon">
+                            <rect y="9" width="20" height="2"></rect>
+                            <rect y="3" width="20" height="2"></rect>
+                            <rect y="15" width="20" height="2"></rect>
+                        </svg></a>
+                </div>
+        </nav>
+    </header>
+
+    {% block index %}
+    {% endblock %}
+
+    {% block cart %}
+    {% endblock %}
+
+    {% block checkout %}
+    {% endblock %}
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://kit.fontawesome.com/e50928d47c.js" crossorigin="anonymous">
+    </script>
+
+
+    {% block bottom %}
+    {% load static %}
+    <script src="{% static 'index.js' %}"></script>
+    {% endblock %}
+
+</body>
+
+</html>

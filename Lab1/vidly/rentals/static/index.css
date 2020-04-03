@@ -1,0 +1,15 @@
+  
+.card {
+  display: inline-block;
+ 
+}
+
+.movie-price {
+  text-align: right;
+}
+
+header img {
+  width: 100px;
+  height: 60px;
+}
+
